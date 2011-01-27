@@ -1,0 +1,8 @@
+<%if(flash[:notice])%>
+  <div style="background-color:aliceblue; border: 1px solid; width: 500px"><%=flash[:notice]%></div>
+<%end%>  
+Push it to queue <br /><br />
+<%=form_tag queues_url do -%>
+  <textarea name="data"></textarea><br />
+  <div><%= submit_tag 'Push' %></div>
+<%end%>
